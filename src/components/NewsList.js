@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 import universityParsingAlgorithm from './universityParsingAlgorithm'
 export default function NewsList({universityData}) {

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 
 export default function UniversityList ({universities,openModalWithData}) {
