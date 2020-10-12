@@ -1,13 +1,12 @@
 import React, {useState} from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
-
-export default function NewsList() {
-  const [news,updateNews] = useState([{data:"Yıldız Teknik Sınava 2 gün kaldı",status:"danger"},{data:"Boğaziçi Üniversitesi Başvuruların açılmasına 5 gün kaldı",status:"info"}]);
-
+import universityParsingAlgorithm from './universityParsingAlgorithm'
+export default function NewsList({universityData}) {
+  let news = universityParsingAlgorithm(universityData)
   return(
     <ListGroup>
       {news.map((item,index)=> {
-         return <ListGroup.Item key={index} variant={item.status} action>{item.data}</ListGroup.Item>
+         return <ListGroup.Item key={index} variant={item.status} action>{item.title}</ListGroup.Item>
       })}
     </ListGroup>
   )
