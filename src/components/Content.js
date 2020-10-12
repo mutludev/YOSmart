@@ -41,8 +41,8 @@ export default function Content () {
 
   return(<Container fluid>
     <Row>
-      <Col><News universityData={universityData}/></Col>
-      <Col><Universities addNewUniversity={addNewUniversity} deleteUniversity={deleteUniversity} universityData={universityData}/></Col>
+      <Col md><News universityData={universityData}/></Col>
+      <Col md><Universities addNewUniversity={addNewUniversity} deleteUniversity={deleteUniversity} universityData={universityData}/></Col>
     </Row>
   </Container>)
 }
