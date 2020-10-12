@@ -5,7 +5,32 @@ import { Button } from 'react-bootstrap'
 
 export default function UniversityModal ({isNew=true,show,handleClose}) {
 
+  function getFormData(){
+    let universityName = document.getElementById("universityName").value
+    let selectUniversityType = document.getElementById("selectUniversityType").value
+    let selectCity = document.getElementById("selectCity").value
+    let universityExamDate = document.getElementById("universityExamDate").value
+    let universityApplyStartDate = document.getElementById("universityApplyStartDate").value
+    let universityApplyEndDate = document.getElementById("universityApplyEndDate").value
+    let universityResultsDate = document.getElementById("universityResultsDate").value
+    let universitSelectStartDate = document.getElementById("universitSelectStartDate").value
+    let universitySelectEndDate = document.getElementById("universitySelectEndDate").value
+    let notes = document.getElementById("notes").value
+    return {
+      universityName,
+      selectUniversityType,
+      selectCity,
+      universityExamDate,
+      universityApplyStartDate,
+      universityApplyEndDate,
+      universityResultsDate,
+      universitSelectStartDate,
+      universitySelectEndDate,
+      notes
+    }
+  }
   function saveChanges(){
+    console.table(getFormData())
     handleClose()
   }
 
