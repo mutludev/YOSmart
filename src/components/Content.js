@@ -28,12 +28,13 @@ export default function Content () {
   function addNewUniversity(data){
     lib.insertOrUpdate("universities", {universityName: data.universityName}, data);
     lib.commit()
-    setUniversityData( [data,...universityData])
+    setUniversityData(lib.queryAll("universities"))
   }
 
 
   function deleteUniversity(uniName){
     lib.deleteRows("universities", {universityName: uniName});
+    lib.commit()
     setUniversityData(lib.queryAll("universities"))
   }
 
