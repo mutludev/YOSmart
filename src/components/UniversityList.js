@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import ListGroup from 'react-bootstrap/ListGroup'
 
-export default function UniversityList () {
-  const [universities,setUniversity] = useState([{data:"Boğaziçi Üniversitesi"},{data:"Yıldız Teknik"}])
+export default function UniversityList ({universities,openModalWithData}) {
 
   return (
     <ListGroup>
       {universities.map((item,index) => {
-        return <ListGroup.Item key={index}>{item.data}</ListGroup.Item>
+        return <ListGroup.Item onClick={()=> openModalWithData(item)} key={index} action>{item.universityName}</ListGroup.Item>
       })}
     </ListGroup>
   )

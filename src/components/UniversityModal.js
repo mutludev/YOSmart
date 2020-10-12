@@ -3,7 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import UniversityForm from './UniversityForm'
 import { Button } from 'react-bootstrap'
 
-export default function UniversityModal ({isNew=true,show,handleClose}) {
+export default function UniversityModal ({isNew=true,show,handleClose, addNewUniversity,uniData,deleteUniversity}) {
 
   function getFormData(){
     let universityName = document.getElementById("universityName").value
@@ -30,7 +30,12 @@ export default function UniversityModal ({isNew=true,show,handleClose}) {
     }
   }
   function saveChanges(){
-    console.table(getFormData())
+    addNewUniversity(getFormData())
+    handleClose()
+  }
+
+  function deleteUni(){
+    deleteUniversity(uniData.universityName)
     handleClose()
   }
 
@@ -42,11 +47,12 @@ export default function UniversityModal ({isNew=true,show,handleClose}) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <UniversityForm/>
+        <UniversityForm data={uniData}/>
       </Modal.Body>
       <Modal.Footer>
+        {(!isNew) && <Button variant="danger" onClick={deleteUni}>Delete</Button>}
         <Button variant="primary" onClick={saveChanges}>
-          Save
+        {isNew ? "Save" : "Update"}
         </Button>
       </Modal.Footer>
     </Modal>

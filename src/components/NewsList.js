@@ -7,7 +7,7 @@ export default function NewsList() {
   return(
     <ListGroup>
       {news.map((item,index)=> {
-         return <ListGroup.Item key={index} variant={item.status}>{item.data}</ListGroup.Item>
+         return <ListGroup.Item key={index} variant={item.status} action>{item.data}</ListGroup.Item>
       })}
     </ListGroup>
   )
