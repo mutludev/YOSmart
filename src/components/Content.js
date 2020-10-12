@@ -17,6 +17,7 @@ if(lib.isNew()){
     "universityResultsDate",
     "universitSelectStartDate",
     "universitySelectEndDate",
+    "selectionResultsDate",
     "notes"]);
     lib.commit()
 }

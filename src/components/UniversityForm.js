@@ -56,7 +56,7 @@ export default function UniversityForm ({data={}}) {
       </Row>
 
       <Form.Group controlId="universityResultsDate">
-        <Form.Label>Results Date</Form.Label>
+        <Form.Label>Exam Results Date</Form.Label>
         <Form.Control type="date" defaultValue={data.universityResultsDate}/>
       </Form.Group>
 
@@ -75,11 +75,15 @@ export default function UniversityForm ({data={}}) {
         </Col>
       </Row>
 
-      <Form.Group controlId="notes">
-          <Form.Label>Notes</Form.Label>
-          <Form.Control as="textarea" rows="3" defaultValue={data.notes}/>
-          </Form.Group>
+      <Form.Group controlId="selectionResultsDate">
+        <Form.Label>Selection Results Date</Form.Label>
+        <Form.Control type="date" defaultValue={data.selectionResultsDate}/>
+      </Form.Group>
 
+      <Form.Group controlId="notes">
+        <Form.Label>Notes</Form.Label>
+        <Form.Control as="textarea" rows="3" defaultValue={data.notes}/>
+      </Form.Group>
     </Form>
     )
 }

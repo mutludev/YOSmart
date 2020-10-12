@@ -15,6 +15,7 @@ export default function UniversityModal ({isNew=true,show,handleClose, addNewUni
     let universityResultsDate = document.getElementById("universityResultsDate").value
     let universitSelectStartDate = document.getElementById("universitSelectStartDate").value
     let universitySelectEndDate = document.getElementById("universitySelectEndDate").value
+    let selectionResultsDate = document.getElementById("selectionResultsDate").value
     let notes = document.getElementById("notes").value
     return {
       universityName,
@@ -26,6 +27,7 @@ export default function UniversityModal ({isNew=true,show,handleClose, addNewUni
       universityResultsDate,
       universitSelectStartDate,
       universitySelectEndDate,
+      selectionResultsDate,
       notes
     }
   }
