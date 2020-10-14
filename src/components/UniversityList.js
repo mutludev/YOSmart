@@ -5,8 +5,8 @@ export default function UniversityList ({universities,openModalWithData}) {
 
   return (
     <ListGroup>
-      {universities.map((item,index) => {
-        return <ListGroup.Item onClick={()=> openModalWithData(item)} key={index} action>{item.universityName}</ListGroup.Item>
+      {universities.map((item) => {
+        return <ListGroup.Item onClick={()=> openModalWithData(item)} key={item.ID} action>{item.universityName}</ListGroup.Item>
       })}
     </ListGroup>
   )
