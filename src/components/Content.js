@@ -26,7 +26,7 @@ export default function Content () {
   const [universityData,setUniversityData] = useState(lib.queryAll("universities"))
 
   function addNewUniversity(data){
-    lib.insertOrUpdate("universities", {universityName: data.universityName}, data);
+    lib.insertOrUpdate("universities", {ID: data.ID}, data);
     lib.commit()
     setUniversityData(lib.queryAll("universities"))
   }

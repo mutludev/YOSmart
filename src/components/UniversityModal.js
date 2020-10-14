@@ -28,7 +28,8 @@ export default function UniversityModal ({isNew=true,show,handleClose, addNewUni
       universitSelectStartDate,
       universitySelectEndDate,
       selectionResultsDate,
-      notes
+      notes,
+      ID:uniData.ID
     }
   }
   function saveChanges(){
