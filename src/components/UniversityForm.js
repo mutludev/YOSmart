@@ -25,8 +25,8 @@ export default function UniversityForm ({data={}}) {
         <Form.Group controlId="selectCity">
           <Form.Label>Select City</Form.Label>
           <Form.Control as="select" defaultValue={data.selectCity}>
-          {cities.map(item => {
-            return <option>{item}</option>
+          {cities.map((item,index) => {
+            return <option key={index}>{item}</option>
           })}
           </Form.Control>
         </Form.Group>
