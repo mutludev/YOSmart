@@ -43,13 +43,13 @@ export default function UniversityForm ({data={}}) {
       <Row>
         <Col>
           <Form.Group controlId="universityApplyStartDate">
-          <Form.Label>Apply Start Date</Form.Label>
+          <Form.Label>Application Date - Start</Form.Label>
           <Form.Control type="date" defaultValue={data.universityApplyStartDate}/>
       </Form.Group>
         </Col>
         <Col>
           <Form.Group controlId="universityApplyEndDate">
-          <Form.Label>Apply End Date</Form.Label>
+          <Form.Label>Application Date - End</Form.Label>
           <Form.Control type="date" defaultValue={data.universityApplyEndDate}/>
           </Form.Group>
         </Col>
@@ -63,20 +63,20 @@ export default function UniversityForm ({data={}}) {
       <Row>
         <Col>
           <Form.Group controlId="universitSelectStartDate">
-          <Form.Label>Selection Start Date</Form.Label>
+          <Form.Label>Preference Date - Start</Form.Label>
           <Form.Control type="date" defaultValue={data.universitSelectStartDate}/>
       </Form.Group>
         </Col>
         <Col>
           <Form.Group controlId="universitySelectEndDate">
-          <Form.Label>Selection End Date</Form.Label>
+          <Form.Label>Preference Date - End</Form.Label>
           <Form.Control type="date" defaultValue={data.universitySelectEndDate}/>
           </Form.Group>
         </Col>
       </Row>
 
       <Form.Group controlId="selectionResultsDate">
-        <Form.Label>Selection Results Date</Form.Label>
+        <Form.Label>Preference Results Date</Form.Label>
         <Form.Control type="date" defaultValue={data.selectionResultsDate}/>
       </Form.Group>
 

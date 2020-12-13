@@ -16,9 +16,9 @@ export default function universityParsingAlgorithm(data){
     //Exam Date
     let remainingExamDate = Math.ceil((examDate-currentDate)/86400000)
     if(remainingExamDate<=maxDaysForNotifications && remainingExamDate>=0){
-      news.push({title:`${universityName} sınavına ${remainingExamDate} gün kaldı.`,status:"danger",days:remainingExamDate})
+      news.push({title:`${remainingExamDate} days left for the ${universityName} exam`,status:"danger",days:remainingExamDate})
     }else if (remainingExamDate>=-1){
-      news.push({title:`${universityName} sınavı bugün.`,status:"danger",days:remainingExamDate})
+      news.push({title:`${universityName} exam today`,status:"danger",days:remainingExamDate})
     }
 
 
